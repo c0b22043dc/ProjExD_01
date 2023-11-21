@@ -4,9 +4,9 @@ import pygame as pg
 
 def main():
     pg.display.set_caption("はばたけ！こうかとん")
-    screen = pg.display.set_mode((800, 600))
+    screen = pg.display.set_mode((1600, 900))
     clock  = pg.time.Clock()
-    bg_img = pg.image.load("ex01/fig/pg_bg.jpg")
+    bg_img = pg.image.load("ex01/fig/pg_bg.jpg")#練習１
     tmr = 0
     while True:
         for event in pg.event.get():
