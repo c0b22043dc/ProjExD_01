@@ -7,6 +7,7 @@ def main():
     screen = pg.display.set_mode((1600, 900))
     clock  = pg.time.Clock()
     bg_img = pg.image.load("ex01/fig/pg_bg.jpg")#練習１
+    bg_imgs = pg.transform.flip(bg_img,True,False)#演習２
     bard_img = pg.image.load("ex01/fig/3.png")
     bard_img = pg.transform.flip(bard_img, True, False)#練習２
     bard_imgs = [bard_img,pg.transform.rotozoom(bard_img,10,1.0)]#練習３
@@ -27,7 +28,8 @@ def main():
 
         screen.blit(bg_img, [-x, 0])#練習４
         screen.blit(bg_img,[1600-x,0])
-        screen.blit(bg_img, [-x, 0])
+        #演習２
+        screen.blit(bg_imgs, [-x, 0])
 
        #演習１
         screen.blit(bard_img,[300,200])
