@@ -9,6 +9,7 @@ def main():
     bg_img = pg.image.load("ex01/fig/pg_bg.jpg")#練習１
     bard_img = pg.image.load("ex01/fig/3.png")
     bard_img = pg.transform.flip(bard_img, True, False)#練習２
+    bard_imgs = [bard_img,pg.transform.rotozoom(bard_img,10,1.0)]#練習３
     tmr = 0
     while True:
         for event in pg.event.get():
